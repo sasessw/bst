@@ -6,8 +6,8 @@
 #define SORT_QUICK_SORT_H_H
 
 
-
-void change_pivot(int* array, size_t size){
+template <typename T>
+void change_pivot(T* array, size_t size){
     if(((array[sizeof(array)/sizeof(*array)])<=(array[0])<=(array[sizeof(array)/2*sizeof(*array)]))||
             ((array[sizeof(array)/sizeof(*array)])>=(array[0])>=(array[sizeof(array)/2*sizeof(*array)])))
             {std::swap(array[sizeof(array)/sizeof(*array)],array[0]);}
@@ -16,11 +16,12 @@ void change_pivot(int* array, size_t size){
             {std::swap(array[sizeof(array)/sizeof(*array)],array[0]);}
 }
 
-int partition(int* array, int left, int right)
+template <typename T>
+int partition(T* array, int left, int right)
 {
-    change_pivot(array, sizeof(array)/sizeof(*array));
+//   change_pivot(array, sizeof(array)/sizeof(*array));
     int index = left;
-    int pivot = array[index];
+    T pivot = array[index];
     std::swap(array[index], array[right]);
     for (int i = left; i < right; i++)
     {
@@ -31,7 +32,9 @@ int partition(int* array, int left, int right)
     return index;
 }
 
-void qsort(int* array, int left, int right)
+
+template <typename T>
+void qsort(T* array, int left, int right)
 {
     if (left >= right)
         return;
@@ -41,16 +44,9 @@ void qsort(int* array, int left, int right)
     qsort(array, index + 1, right);
 }
 
-void quick_sort(int *array, int len) {
+template <typename T>
+void quick_sort(T *array, int len) {
     qsort(array, 0, len - 1);
-}
-
-
-void message(int arr[], int size) {
-    for (int i = 0; i < size; i++) {
-        std::cout << arr[i] << ' ';
-    }
-    std::cout << std::endl;
 }
 
 #endif //SORT_QUICK_SORT_H_H
