@@ -8,7 +8,7 @@ add_executable(sort ${SOURCE_FILES})
 
 if(BUILD_TESTS)
     enable_testing()
-    file(GLOB ${PROJECT_NAME}_TEST_SOURCES sources/*.cpp)
+    file(GLOB ${PROJECT_NAME}_TEST_SOURCES sources/insertion_sort.cpp)
     add_executable(check ${${PROJECT_NAME}_TEST_SOURCES})
     target_link_libraries(check ${PROJECT_NAME} ${DEPENDS_LIBRARIES} Catch::Catch)
     add_test(NAME check COMMAND check "-s" "-r" "compact" "--use-colour" "yes")
