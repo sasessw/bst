@@ -4,6 +4,7 @@
 #include <iostream>
 #include <chrono>
 #include "../includes/insertion_sort.h"
+
 #include "../includes/template_array.h"
 using namespace std;
 
