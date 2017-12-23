@@ -1,14 +1,19 @@
 language: cpp
 
-script:
-- cmake -H. -B_build -DCMAKE_INSTALL_PREFIX=_install
-- cmake --build _build
-- cmake --build _build --target install
-
 addons:
   apt:
     sources:
-      - george-edison55-precise-backports
+      - kalakris-cmake
     packages:
       - cmake
-      - cmake-data
+      - lcov
+      - gfortran
+      
+script:
+# tests
+- cmake -H. -B_build -DBUILD_TESTS=ON -DENABLE_COVERAGE=ON
+- cmake --build _build
+- cmake --build _build --target test -- ARGS=--verbose
+- cd _build
+- make gcov
+- make lcov
