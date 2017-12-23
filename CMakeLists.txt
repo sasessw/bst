@@ -3,5 +3,5 @@ project(sort)
 
 set(CMAKE_CXX_STANDARD 11)
 
-set(SOURCE_FILES sources/tree_sort.cpp)
+set(SOURCE_FILES sources/insertion_sort.cpp)
 add_executable(sort ${SOURCE_FILES})
