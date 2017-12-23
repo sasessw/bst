@@ -5,9 +5,6 @@
 #ifndef SORT_TEMPLATE_ARRAY_H
 #define SORT_TEMPLATE_ARRAY_H
 
-#ifndef ARRAY_H_
-#define ARRAY_H_
-
 #include <iostream>
 using std::cout;
 using std::endl;
@@ -26,7 +23,9 @@ public:
         size = s;
         myarray = new T [size];
     }
-
+    T getElem(size_t number){
+        return myarray[number];
+    }
     void setArray ( int elem, T val) {
         myarray[elem] = val;
     }
@@ -67,5 +66,4 @@ void T_array<std::string>::generateArray (int length) {
         }
 }
 
-#endif
 #endif //SORT_TEMPLATE_ARRAY_H

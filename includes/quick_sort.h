@@ -6,20 +6,11 @@
 #define SORT_QUICK_SORT_H_H
 
 
-template <typename T>
-void change_pivot(T* array, size_t size){
-    if(((array[sizeof(array)/sizeof(*array)])<=(array[0])<=(array[sizeof(array)/2*sizeof(*array)]))||
-            ((array[sizeof(array)/sizeof(*array)])>=(array[0])>=(array[sizeof(array)/2*sizeof(*array)])))
-            {std::swap(array[sizeof(array)/sizeof(*array)],array[0]);}
-    if(((array[sizeof(array)/sizeof(*array)])>=(array[sizeof(array)/2*sizeof(*array)])>=(array[0]))||
-            ((array[sizeof(array)/sizeof(*array)])<=(array[sizeof(array)/2*sizeof(*array)])<=(array[0])))
-            {std::swap(array[sizeof(array)/sizeof(*array)],array[0]);}
-}
 
 template <typename T>
 int partition(T* array, int left, int right)
 {
-//   change_pivot(array, sizeof(array)/sizeof(*array));
+
     int index = left;
     T pivot = array[index];
     std::swap(array[index], array[right]);
