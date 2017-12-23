@@ -5,6 +5,21 @@
 ## КУРСОВОЙ ПРОЕКТ
 на тему: **Реализация основных алгоритмов сортировок**
 
+## ТЕХНИЧЕСКОЕ ЗАДАНИЕ
+- [x] Реализовать основные алгоритмы сортировок с использование шаблонных функций языка C++
+- [x] Тестирование разработанных алгоритмов с использованием  фреймворка для модульного тестирования Catch
+- [x] Обеспечение 100% покрытия кода
+- [x] Рассмотреть возможность оптимизации при реализации алгоритмов направленных на работу в мультизадачных системах
+
+## РЕЗУЛЬТАТЫ СТАТИЧЕСКОГО АНАЛИЗА КОДА
+
+| check | algorithm | cpplint report | cppcheck report | OCLint report |
+| :---: | --- | --- | --- | --- |
+| ☑️ | **INSERT** | Done processing insertion_sort.h | Checking insertion_sort.h ... | Summary: TotalFiles=1 FilesWithViolations=0 P1=0 P2=0 P3=0 |
+| ☑️ | **SHELL** | Done processing Shell_sort.h | Checking Shell_sort.h ... | Summary: TotalFiles=1 FilesWithViolations=0 P1=0 P2=0 P3=0 |
+| ☑️ | **TREE** | Done processing tree_sort.h | Checking tree_sort.h ... | Summary: TotalFiles=1 FilesWithViolations=0 P1=0 P2=0 P3=0 |
+| ☑️ | **QUICK** | Done processing quick_sort.h | Checking quick_sort.h ... | Summary: TotalFiles=1 FilesWithViolations=0 P1=0 P2=0 P3=0 |
+
 ## ВИЗУАЛИЗАЦИЯ АЛГОРИТМОВ СОРТИРОВОК
 | Insertion | Shell | Tree | Quick |
 | --- | --- | --- | --- |
