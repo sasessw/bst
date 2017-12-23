@@ -12,7 +12,7 @@ using namespace std;
 
 
 
-int main(){
+int main(int argc, char const *argv[]){
 	T_array<std::string> b(19);
 	b.generateArray(10);
 	std::chrono::time_point<std::chrono::system_clock> start, end;
